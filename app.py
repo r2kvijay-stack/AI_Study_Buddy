@@ -43,7 +43,7 @@ if st.button("🚀 Generate Revision Pack", use_container_width=True):
             ## ❓ 5 MCQs (Each with 4 options A,B,C,D and Correct Answer)
             ## 🔑 3 KEY TERMS (Term - Simple Meaning in 1 line)
             Keep language very simple."""
-            response = client.models.generate_content(model="gemini-2.0-flash", contents=prompt)
+            response = client.models.generate_content(model="gemini-2.5-flash", contents=prompt)
             st.success("Done! Your Revision Pack is Ready 👇")
             st.markdown(response.text)
             st.download_button("⬇️ Download Revision Notes", response.text, file_name="revision_notes.txt")
